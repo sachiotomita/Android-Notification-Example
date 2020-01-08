@@ -103,7 +103,7 @@ public class NotificationHandler {
 
 		// building the notification
 		final NotificationCompat.Builder nBuilder = new NotificationCompat.Builder(context)
-				.setSmallIcon(R.drawable.refresh)
+				.setSmallIcon(android.R.drawable.stat_sys_upload)
 				.setContentTitle("Progres notification")
 				.setContentText("Now waiting")
 				.setTicker("Progress notification created")
@@ -131,7 +131,7 @@ public class NotificationHandler {
 							.setContentTitle("Progress running...")
 							.setContentText("Now running...")
 							.setProgress(100, i, false)
-							.setSmallIcon(R.drawable.download)
+							.setSmallIcon(android.R.drawable.stat_sys_download)
 							.setContentInfo(i + " %");
 
 						// use the same id for update instead created another one
@@ -154,7 +154,7 @@ public class NotificationHandler {
 				nBuilder.setContentText("Progress finished :D")
 						.setContentTitle("Progress finished !!")
 						.setTicker("Progress finished !!!")
-						.setSmallIcon(R.drawable.accept)
+						.setSmallIcon(android.R.drawable.sym_def_app_icon)
 						.setUsesChronometer(false);
 
 				mNotificationManager.notify(progresID, nBuilder.build());
@@ -178,8 +178,8 @@ public class NotificationHandler {
 					.setContentTitle("Button notification") // notification title
 					.setContentText("Expand to show the buttons...") // content text
 					.setTicker("Showing button notification") // status bar message
-					.addAction(R.drawable.accept, "Accept", pIntent) // accept notification button
-					.addAction(R.drawable.cancel, "Cancel", pIntent); // cancel notification button
+					.addAction(android.R.drawable.sym_def_app_icon, "Accept", pIntent) // accept notification button
+					.addAction(android.R.drawable.ic_menu_close_clear_cancel, "Cancel", pIntent); // cancel notification button
 
 			mNotificationManager.notify(1001, nBuilder.build());
 
